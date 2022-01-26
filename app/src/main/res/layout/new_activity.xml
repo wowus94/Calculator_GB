@@ -15,7 +15,7 @@
         android:background="#70D1C7C7"
         android:hint="@string/enter_num"
         android:paddingStart="20dp"
-        android:textSize="30sp" />
+        android:textSize="25sp" />
 
     <GridLayout
         android:layout_width="wrap_content"
