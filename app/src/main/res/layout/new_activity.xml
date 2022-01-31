@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fon"
     android:gravity="center"
-    android:orientation="vertical"
-    android:background="@drawable/fon">
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/editText"
@@ -12,9 +12,20 @@
         android:layout_height="80dp"
         android:layout_marginBottom="20dp"
         android:autofillHints="phone"
-        android:background="#70D1C7C7"
+        android:background="@color/field"
         android:hint="@string/enter_num"
         android:paddingStart="20dp"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center|"
+        android:autofillHints="phone"
+        android:background="@color/field"
+        android:gravity="center"
+        android:hint="@string/result"
         android:textSize="25sp" />
 
     <GridLayout
@@ -22,9 +33,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
+        android:background="#70D1C7C7"
         android:columnCount="5"
-        android:rowCount="6"
-        android:background="#70D1C7C7">
+        android:rowCount="6">
 
         <Button
             android:id="@+id/button_1"
@@ -35,9 +46,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_number"
             android:text="@string/_1"
-            android:textSize="25sp"
-            android:backgroundTint="#DF2E2B2B"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_2"
@@ -48,9 +59,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_number"
             android:text="@string/_2"
-            android:textSize="25sp"
-            android:backgroundTint="#DF2E2B2B"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_3"
@@ -61,9 +72,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_number"
             android:text="@string/_3"
-            android:textSize="25sp"
-            android:backgroundTint="#DF2E2B2B"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_4"
@@ -74,9 +85,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_number"
             android:text="@string/_4"
-            android:textSize="25sp"
-            android:backgroundTint="#DF2E2B2B"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_5"
@@ -87,9 +98,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_number"
             android:text="@string/_5"
-            android:textSize="25sp"
-            android:backgroundTint="#DF2E2B2B"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_6"
@@ -100,9 +111,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_number"
             android:text="@string/_6"
-            android:textSize="25sp"
-            android:backgroundTint="#DF2E2B2B"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_7"
@@ -113,9 +124,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_number"
             android:text="@string/_7"
-            android:textSize="25sp"
-            android:backgroundTint="#DF2E2B2B"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_8"
@@ -126,9 +137,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_number"
             android:text="@string/_8"
-            android:textSize="25sp"
-            android:backgroundTint="#DF2E2B2B"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_9"
@@ -139,9 +150,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_number"
             android:text="@string/_9"
-            android:textSize="25sp"
-            android:backgroundTint="#DF2E2B2B"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/button_0"
@@ -152,9 +163,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_number"
             android:text="@string/_0"
-            android:textSize="25sp"
-            android:backgroundTint="#DF2E2B2B"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/sum"
@@ -165,9 +176,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_action"
             android:text="@string/sum"
-            android:textSize="25sp"
-            android:backgroundTint="#BA131010"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/min"
@@ -178,9 +189,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_action"
             android:text="@string/min"
-            android:textSize="25sp"
-            android:backgroundTint="#BA131010"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/multiply"
@@ -191,9 +202,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_action"
             android:text="@string/multiply"
-            android:textSize="25sp"
-            android:backgroundTint="#BA131010"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/division"
@@ -204,12 +215,12 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_action"
             android:text="@string/division"
-            android:textSize="25sp"
-            android:backgroundTint="#BA131010"/>
+            android:textSize="25sp" />
 
         <Button
-            android:id="@+id/result"
+            android:id="@+id/equality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="3"
@@ -220,9 +231,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
-            android:text="@string/result"
-            android:textSize="25sp"
-            android:backgroundTint="#BA131010"/>
+            android:backgroundTint="@color/color_action"
+            android:text="@string/equality"
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/point"
@@ -233,9 +244,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_action"
             android:text="@string/point"
-            android:textSize="25sp"
-            android:backgroundTint="#BA131010"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/clear"
@@ -248,9 +259,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_action"
             android:text="@string/clear"
-            android:textSize="25sp"
-            android:backgroundTint="#BA131010"/>
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/procent"
@@ -261,9 +272,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/color_action"
             android:text="@string/procent"
-            android:textSize="25sp"
-            android:backgroundTint="#BA131010"/>
+            android:textSize="25sp" />
 
     </GridLayout>
 

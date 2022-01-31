@@ -14,9 +14,10 @@
     <string name="min">-</string>
     <string name="multiply">*</string>
     <string name="division">/</string>
-    <string name="result">=</string>
+    <string name="equality">=</string>
     <string name="point">.</string>
     <string name="clear">Clear</string>
     <string name="procent">%</string>
     <string name="enter_num">Поле ввода</string>
+    <string name="result">Результат</string>
 </resources>
