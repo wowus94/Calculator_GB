@@ -10,4 +10,5 @@
     <color name="field">#70D1C7C7</color>
     <color name="color_number">#DF2E2B2B</color>
     <color name="color_action">#BA131010</color>
+    <color name="background">#70D1C7C7</color>
 </resources>
