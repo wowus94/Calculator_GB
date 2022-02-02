@@ -16,7 +16,7 @@
         android:hint="@string/enter_num"
         android:inputType="numberDecimal"
         android:paddingStart="20dp"
-        android:textSize="25sp" />
+        android:textSize="@dimen/Text_size" />
 
     <TextView
         android:id="@+id/result"
@@ -27,7 +27,7 @@
         android:background="@color/field"
         android:gravity="center"
         android:hint="@string/result"
-        android:textSize="25sp" />
+        android:textSize="@dimen/Text_size" />
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_number"
             android:text="@string/_1"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/button_2"
@@ -62,7 +62,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_number"
             android:text="@string/_2"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/button_3"
@@ -75,7 +75,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_number"
             android:text="@string/_3"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/button_4"
@@ -88,7 +88,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_number"
             android:text="@string/_4"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/button_5"
@@ -101,7 +101,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_number"
             android:text="@string/_5"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/button_6"
@@ -114,7 +114,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_number"
             android:text="@string/_6"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/button_7"
@@ -127,7 +127,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_number"
             android:text="@string/_7"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/button_8"
@@ -140,7 +140,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_number"
             android:text="@string/_8"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/button_9"
@@ -153,7 +153,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_number"
             android:text="@string/_9"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/button_0"
@@ -166,7 +166,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_number"
             android:text="@string/_0"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/sum"
@@ -179,7 +179,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_action"
             android:text="@string/sum"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/min"
@@ -192,7 +192,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_action"
             android:text="@string/min"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/multiply"
@@ -205,7 +205,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_action"
             android:text="@string/multiply"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/division"
@@ -218,7 +218,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_action"
             android:text="@string/division"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/equality"
@@ -234,7 +234,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_action"
             android:text="@string/equality"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/point"
@@ -247,7 +247,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_action"
             android:text="@string/point"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/clear"
@@ -262,7 +262,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_action"
             android:text="@string/clear"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
         <Button
             android:id="@+id/procent"
@@ -275,7 +275,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/color_action"
             android:text="@string/procent"
-            android:textSize="25sp" />
+            android:textSize="@dimen/Text_size" />
 
     </GridLayout>
 
