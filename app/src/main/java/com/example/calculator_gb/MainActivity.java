@@ -3,11 +3,11 @@ package com.example.calculator_gb;
 import static com.example.calculator_gb.R.id.radioButtonMaterialDefault;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,20 +36,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText editText;
     Double operand = null;
     String lastOperation = "";
-
+    Button setTheme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(MyApp.currentTheme);
         setContentView(R.layout.new_activity);
-        ((RadioButton) findViewById(R.id.radioButtonMaterialDefault)).setOnClickListener(this);
-        ((RadioButton) findViewById(R.id.radioButtonMaterialRed)).setOnClickListener(this);
-        ((RadioButton) findViewById(R.id.radioButtonMaterialGreen)).setOnClickListener(this);
-        ((RadioButton) findViewById(R.id.radioButtonMaterialBlue)).setOnClickListener(this);
-
         initView();
         initListeners();
+        setTheme = findViewById(R.id.setTheme);
+        setTheme.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ThemeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -109,25 +113,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @SuppressLint({"SetTextI18n", "NonConstantResourceId"})
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case radioButtonMaterialDefault: {
-                MyApp.currentTheme = R.style.Theme_Calculator_GB;
-                break;
-            }
-            case R.id.radioButtonMaterialGreen: {
-                MyApp.currentTheme = R.style.myThemeGreen;
-                break;
-            }
-            case R.id.radioButtonMaterialBlue: {
-                MyApp.currentTheme = R.style.myThemeBlue;
-                break;
-            }
-            case R.id.radioButtonMaterialRed: {
-                MyApp.currentTheme = R.style.myThemeRed;
-                break;
-            }
-        }
-        recreate();
 
         Button button = (Button) view;
         editText.setText(editText.getText().toString() + button.getText().toString());

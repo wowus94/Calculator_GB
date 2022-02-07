@@ -161,43 +161,16 @@
             android:layout_column="3"
             android:text="@string/procent" />
 
+
     </GridLayout>
 
-    <RadioGroup
-        android:id="@+id/radioButtons"
+    <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/marginRadioGroup"
-        android:orientation="vertical">
+        android:layout_height="wrap_content" />
 
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialDefault"
-            android:layout_width="@dimen/layout_width"
-            android:layout_height="wrap_content"
-            android:background="@color/field"
-            android:text="@string/default_theme" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialRed"
-            android:layout_width="@dimen/layout_width"
-            android:layout_height="wrap_content"
-            android:background="@color/red_300"
-            android:text="@string/red_theme" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialGreen"
-            android:layout_width="@dimen/layout_width"
-            android:layout_height="wrap_content"
-            android:background="@color/green_300"
-            android:text="@string/green_theme" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialBlue"
-            android:layout_width="@dimen/layout_width"
-            android:layout_height="wrap_content"
-            android:background="@color/blue_300"
-            android:text="@string/blue_theme" />
-
-    </RadioGroup>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/setTheme"
+        style="@style/btnStyle"
+        android:text="@string/setTheme" />
 
 </LinearLayout>

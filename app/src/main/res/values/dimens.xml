@@ -2,7 +2,7 @@
 <resources>
     <dimen name="textSize">25sp</dimen>
     <dimen name="marginBtn">5dp</dimen>
-    <dimen name="marginRadioGroup">10dp</dimen>
-    <dimen name="layout_width">130dp</dimen>
+    <dimen name="layout_marginTop">150dp</dimen>
+    <dimen name="layout_width">300dp</dimen>
 
 </resources>
