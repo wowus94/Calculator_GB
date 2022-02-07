@@ -6,10 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.RadioButton;
 
-public class ThemeActivity extends AppCompatActivity {
+public class ThemeActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,10 +18,10 @@ public class ThemeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_theme);
         setTheme(MyApp.currentTheme);
 
-        ((RadioButton) findViewById(R.id.radioButtonMaterialDefault)).setOnClickListener((View.OnClickListener) this);
-        ((RadioButton) findViewById(R.id.radioButtonMaterialRed)).setOnClickListener((View.OnClickListener) this);
-        ((RadioButton) findViewById(R.id.radioButtonMaterialGreen)).setOnClickListener((View.OnClickListener) this);
-        ((RadioButton) findViewById(R.id.radioButtonMaterialBlue)).setOnClickListener((View.OnClickListener) this);
+        ((RadioButton) findViewById(R.id.radioButtonMaterialDefault)).setOnClickListener(this);
+        ((RadioButton) findViewById(R.id.radioButtonMaterialRed)).setOnClickListener(this);
+        ((RadioButton) findViewById(R.id.radioButtonMaterialGreen)).setOnClickListener(this);
+        ((RadioButton) findViewById(R.id.radioButtonMaterialBlue)).setOnClickListener(this);
     }
 
 

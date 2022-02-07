@@ -45,14 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initView();
         initListeners();
         setTheme = findViewById(R.id.setTheme);
-        setTheme.setOnClickListener(new View.OnClickListener() {
-
-
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ThemeActivity.class);
-                startActivity(intent);
-            }
+        setTheme.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, ThemeActivity.class);
+            startActivity(intent);
         });
     }
 
