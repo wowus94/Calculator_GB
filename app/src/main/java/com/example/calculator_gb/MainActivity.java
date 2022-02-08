@@ -1,7 +1,5 @@
 package com.example.calculator_gb;
 
-import static com.example.calculator_gb.R.id.radioButtonMaterialDefault;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,10 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    public static final String KEY_INTENT_FROM_SECOND_TO_MAIN = "key";
+    private static final int REQUEST_CODE = 1;
     Button button_1;
     Button button_2;
     Button button_3;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Double operand = null;
     String lastOperation = "";
     Button setTheme;
+    int resultCode;
+    int requestCode = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +53,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         });
     }
-
-
     void initView() {
         button_0 = findViewById(R.id.button_0);
         button_1 = findViewById(R.id.button_1);
@@ -108,7 +109,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @SuppressLint({"SetTextI18n", "NonConstantResourceId"})
     @Override
     public void onClick(View view) {
-
         Button button = (Button) view;
         editText.setText(editText.getText().toString() + button.getText().toString());
         switch (view.getId()) {
@@ -157,6 +157,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         }
+    }
+
+    protected void onActivityResult(int resultCode, int result, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
+            data.getIntExtra(KEY_INTENT_FROM_SECOND_TO_MAIN, R.style.Theme_Calculator_GB);
+        }
+        setTheme(data.getIntExtra(KEY_INTENT_FROM_SECOND_TO_MAIN, R.style.Theme_Calculator_GB));
+        recreate();
     }
 
     public void onSaveInstanceState(Bundle outState) {
