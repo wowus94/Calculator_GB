@@ -31,7 +31,6 @@
         <item name="colorOnTertiaryContainer">@color/red_300</item>
         <item name="android:statusBarColor">@color/red_300</item>
 
-
     </style>
 
     <style name="myThemeGreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">

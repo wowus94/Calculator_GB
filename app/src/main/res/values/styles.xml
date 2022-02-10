@@ -41,5 +41,7 @@
         <item name="android:textSize">@dimen/textSize</item>
     </style>
 
+    <style name="AppTheme"></style>
+
 
 </resources>

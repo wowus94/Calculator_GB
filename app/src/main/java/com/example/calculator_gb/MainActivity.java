@@ -1,7 +1,9 @@
 package com.example.calculator_gb;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +15,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
+
+    private static final String PREF_NAME = "key";
+    private static final String PREF_THEME_KEY = "key_theme";
+
     public static final String KEY_INTENT_FROM_SECOND_TO_MAIN = "key";
     private static final int REQUEST_CODE = 1;
     Button button_1;
@@ -47,12 +56,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.new_activity);
         initView();
         initListeners();
-        setTheme = findViewById(R.id.setTheme);
-        setTheme.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, ThemeActivity.class);
-            startActivity(intent);
-        });
+
+        SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        sharedPreferences.getInt(PREF_THEME_KEY, 1);
     }
+
     void initView() {
         button_0 = findViewById(R.id.button_0);
         button_1 = findViewById(R.id.button_1);
@@ -74,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         procent = findViewById(R.id.procent);
         result = findViewById(R.id.result);
         editText = findViewById(R.id.editText);
-
+        setTheme = findViewById(R.id.setTheme);
     }
 
 
@@ -97,7 +105,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         point.setOnClickListener(this);
         clear.setOnClickListener(this);
         procent.setOnClickListener(this);
-
+        setTheme.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, ThemeActivity.class);
+            startActivity(intent);
+        });
     }
 
     Double first = 0.0;
