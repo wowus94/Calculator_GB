@@ -53,12 +53,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme());
         setContentView(R.layout.new_activity);
         initView();
         initListeners();
 
         SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         sharedPreferences.getInt(PREF_THEME_KEY, 1);
+    }
+
+    private int getAppTheme() {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        return sharedPreferences.getInt(PREF_THEME_KEY, R.style.Theme_Calculator_GB);
     }
 
     void initView() {
